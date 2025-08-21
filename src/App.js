@@ -12,7 +12,7 @@ function App() {
       {/* Background Image */}
       <Box
         component="img"
-        src="/images/doodle_banner.jpg"
+        src="/images/math_wp.jpg"
         alt="Background"
         sx={{
           position: 'absolute',
@@ -22,7 +22,7 @@ function App() {
           height: '100%',
           objectFit: 'cover',
           zIndex: -1,
-          opacity: 0.3, // Optional: soften the background
+          opacity: 1, // Optional: soften the background
         }}
       />
       <Container sx={{ backgroundColor: 'rgba(255, 255, 255, 0.6)', // semi-transparent white
@@ -38,39 +38,92 @@ function App() {
         Обща информация
       </Typography>
 
-      <Typography variant='body1' sx={{mb: 2}}>
-        Предлагам уроци по програмиране и математика за заинтересовани ученици от 5. до 12. клас. Уроците по програмиране и подготовка по математика за матура в 7. клас са групови, като групите се очаква да бъдат между 5 и 10 човека. Груповите уроци ще бъдат около 2 часа седмично в един ден от седмицата, който ще се определи след сформирането на групата, но най-вероятно събота/неделя. Цената на уроците е 200 лв. на месец (около 25 лв. на час). Ако желаете индивидуални уроци по математика или програмиране звъннете за повече информация. За записване се обадете или попълнете формата, като натиснете бутона долу. 
+      <Typography
+        variant="body1"
+        sx={{
+          mb: 2,
+          textAlign: "justify", // spreads words to fill both left & right edges
+        }}
+      >
+        Предлагам уроци по програмиране и математика за заинтересовани ученици от 5. до 12. клас. Уроците по програмиране и подготовка по математика за матура в 7. клас са групови, като групите се очаква да бъдат между 5 и 10 човека. Груповите уроци ще бъдат около 2 часа седмично в един ден от седмицата, който ще се определи след сформирането на групата, но най-вероятно събота/неделя. За записване се обадете или попълнете формата, като натиснете бутона долу. 
+      </Typography>
+
+
+      <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
+        <Button
+          variant="outlined"
+          onClick={() =>
+            window.open(
+              "https://docs.google.com/forms/d/e/1FAIpQLScSNNrVdNJEbjhnllJ7PFqfQrPypZBxEENeb5VfesRDMPmAIQ/viewform?usp=header",
+              "_blank"
+            )
+          }
+        >
+          <Typography>
+            запиши се тук
+          </Typography>
+        </Button>
+      </Box>
+
+
+      <Typography variant='h1' sx={{my:6}}>
+        Цени
       </Typography>
       <Typography variant='body1' sx={{mb: 2, fontWeight: 'bold'}}>
         Първият урок за всеки ученик е безплатен!
       </Typography>
-
-      <Button 
-        variant="outlined" 
-        onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLScSNNrVdNJEbjhnllJ7PFqfQrPypZBxEENeb5VfesRDMPmAIQ/viewform?usp=header", "_blank")}
+      <Typography
+        variant="body1"
+        sx={{
+          mb: 2,
+          textAlign: "justify", // spreads words to fill both left & right edges
+        }}
       >
-        <Typography>
-          запиши се тук
-        </Typography>
-      </Button>
+        Цената на груповите уроци е 220 лв. на месец или 550 лв. за 3 месеца.
+        Ако желаете индивидуални уроци по математика или програмиране звъннете за повече информация.
+      </Typography>
 
       <Typography variant='h1' sx={{my:6}}>
         За уроците по увод в програмирането
       </Typography>
 
-      <Typography variant='body1' sx={{mb: 2}}>
+      <Typography
+        variant="body1"
+        sx={{
+          mb: 2,
+          textAlign: "justify", // spreads words to fill both left & right edges
+        }}
+      >
         Груповите уроци по програмиране са с цел да въведат учениците в основите на алгоритмите, булевата логика и базови познания в компютърните архитектури. Те са предвидени за начинаещи, които нямат знания в тази материя. 
       </Typography>
       
-      <Typography variant='body1' sx={{mb: 2}}>
+      <Typography
+        variant="body1"
+        sx={{
+          mb: 2,
+          textAlign: "justify", // spreads words to fill both left & right edges
+        }}
+      >
         Програмирането е не само актуално в настоящето, но и има огромни проспекти за бъдещето. То развива мисленето на учениците по различен от другите предмети, тъй като подобрява тяхната способност за решаване на проблеми, чрез създаването на собствен алгоритъм. 
       </Typography>
 
-      <Typography variant='body1' sx={{mb: 2}}>
+      <Typography
+        variant="body1"
+        sx={{
+          mb: 2,
+          textAlign: "justify", // spreads words to fill both left & right edges
+        }}
+      >
         Уроците ще бъдат на програмния език C, но преди да се сблъскат с него ще има доста уводни лекции, които за мен са дори по-важни. Целта на тези уроци е учениците да не се плашат от думата код и да разбират какво всъщност правят компютрите.
       </Typography>
 
-      <Typography variant='body1' sx={{mb: 2}}>
+      <Typography
+        variant="body1"
+        sx={{
+          mb: 2,
+          textAlign: "justify", // spreads words to fill both left & right edges
+        }}
+      >
         Силно препоръчвам тези курсове за всеки заинтересован в тази област, тъй като в повечето места, дори в школи и университети, този материал се минава много набързо в началото и на учениците им е трудно да разбират какво точно се случва. Ще следвам програма, подобна на тази, по която се преподава в най-доброто място за научаване на програмирането, а именно ТУЕС.
       </Typography>
 
@@ -79,7 +132,13 @@ function App() {
         За уроците по математика
       </Typography>
 
-      <Typography variant='body1' sx={{mb: 2}}>
+      <Typography
+        variant="body1"
+        sx={{
+          mb: 2,
+          textAlign: "justify", // spreads words to fill both left & right edges
+        }}
+      >
         Груповите уроци по математика са за ученици в 7. клас с цел подготовка за матурите. Ще се обяснява задължителния материал, както и ще се дават задачи за решаване в час и за домашна работа. Целта ми е да преподам материала по възможно най-приятелски начин, за да учениците не се стресират излишно, тъй като материала е много, но е доста лесен в същото време. По време на учебната година ще се правят контролни, тестове и примерни матури, с цел да се премерят знанията на учениците до момента, за да се разбере дали нещо не е ясно. Уроците ще протичат по следния начин: преподавам теорията, решавам задачи, давам на учениците да решават задачи самостоятелно или на дъската, правя резюме на какво трябва да са научили.
       </Typography>
 
@@ -87,7 +146,13 @@ function App() {
         За мен
       </Typography>
 
-      <Typography variant='body1' sx={{mb: 2}}>
+      <Typography
+        variant="body1"
+        sx={{
+          mb: 2,
+          textAlign: "justify", // spreads words to fill both left & right edges
+        }}
+      >
         Здравейте, казвам се Браян Монтичелли и съм студент по компютърни науки в СУ "Св. Климент Охридски". Винаги съм бил добър по математика, изкарах 100 точки на матурите в 7. и 10. клас, както и на входния изпит за университета и имам резултати над 5.70 в една от най-сложните специалности за първи курс. Огромна част от знанията ми по програмиране дължа на това, че съм завършил ТУЕС с 6.00. Цял живот съм преподавал този материал на съученици и роднини и реших, че съм добър в това и бих искал да помогна и на останалите. Смятам, че най-лесно и спокойно би било за учениците, ако някой, който е изживял това наскоро, им преподаде материала на техен език.
       </Typography>
 
